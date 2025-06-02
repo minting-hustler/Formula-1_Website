@@ -17,8 +17,8 @@ function CoverPage() {
             </div>
         </div>
         
-        <div className='w-full h-1/2 bg-orange-900 flex '>
-            <div className='bottom_left w-1/2 h-full flex  bg-green-500'>
+        <div className='w-full bg-orange-900 flex '>
+            <div className='bottom_left w-1/2 flex  bg-green-500'>
                 
                 <div className='bottom_ w-1/2 h-full flex flex-col bg-purple-500 bg-cover bg-center border-4 border-black border'>
                     <div className='w-full h-1/2  bg-green-500 bg-[url(photos/sebastian-vettel-ferrari-3rd.jpg)] bg-cover bg-center '>
