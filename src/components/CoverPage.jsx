@@ -1,59 +1,85 @@
-import React from 'react'
-
 function CoverPage() {
   return (
-    <div className='bg-white  w-full h-full flex flex-col '>
+    <div className='w-full h-screen overflow-hidden flex flex-col bg-white relative'>
 
-        <div className=' w-full h-1/2 '>
-            <div className='  w-full h-1/2 bg-white text-center -pt-5 border-4 border-black border '>
-                <p className=' w-full h-full text-12xl tracking-wide capitalize font-regular font-title text-black text-centre  flex items-center justify-center overflow-hidden'>
-                VETTEL
-                </p>
-            </div>
-            <div className='second_name   w-full h-1/2 bg-white text-center border-4 border-black border'>
-                <p className='  w-full h-full  text-12xl  capitalize font-regular font-title text-black text-centre flex items-center justify-center overflow-hidden '>
-                    SEBASTIAN
-                </p>
-            </div>
-        </div>
-        
-        <div className='w-full h-1/2 bg-orange-900 flex '>
-            <div className='bottom_left w-1/2 h-full flex  bg-green-500'>
-                
-                <div className='bottom_ w-1/2 h-full flex flex-col bg-purple-500 bg-cover bg-center border-4 border-black border'>
-                    <div className='w-full h-1/2  bg-green-500 bg-[url(photos/sebastian-vettel-ferrari-3rd.jpg)] bg-cover bg-center '>
-                        <p className='text-2xl  capitalize font-bold font-title text-black pl-4 pt-4'>Podiums</p>
-                    </div>
-                    <div className='w-full h-1/2 bg-white bg-[url(photos/seb_helemt.jpg)] bg-cover bg-center border-t-4 border-b-4 border-black '>
-                        <p  className='text-3xl  capitalize font-bold font-title text-black '>Awwards</p>
+      {/* Hero Section — 62% of viewport */}
+      <div className='flex flex-col border-b-4 border-black' style={{ height: '50%' }}>
 
-                    </div>
-                </div>
-
-                <div className='bottom_left_right w-1/2 h-full flex flex-col bg-yellow-500 bg-cover bg-center border-4 border-black border '>
-                    <div className='w-full h-3/5 bg-blue-600 bg-[url(/photos/sv_black.jpg)] bg-cover bg-center '>
-                        <p className='text-2xl  capitalize font-bold font-title text-black pl-2 pt-'>Wins</p>
-                    </div>
-                    <div className='w-full h-2/5  bg-red-300 bg-[url(photos/sebastian_09.jpeg)] bg-cover bg-center border-t-4 border-b-4 border-black '>
-                    </div>
-                    
-                </div>
-
-            </div>
-            <div className='w-1/2 h-full bg-[url(/photos/ferrari_02.jpg)] bg-cover bg-center flex '>
-                <img src="photos/sebastian_cover.png" alt="" />
-
-            </div>
+        <div className='flex-1 flex flex-col items-center justify-center overflow-hidden w-full'>
+          <h1
+            className='font-title font-bold text-black whitespace-nowrap select-none'
+            style={{ fontSize: '29vh', lineHeight: 0.72, textAlign: 'center', width: '100%' }}
+          >
+            SEBASTIAN
+          </h1>
+          <h1
+            className='font-title font-bold text-black whitespace-nowrap select-none'
+            style={{ fontSize: '37vh', lineHeight: 0.72, textAlign: 'center', width: '100%' }}
+          >
+            VETTEL
+          </h1>
         </div>
 
-        
+      </div>
 
-        
-        
+      {/* Bottom Section — remaining 38% */}
+      <div className='flex-1 grid' style={{ gridTemplateColumns: '50% 50%' }}>
+
+        {/* Left half: 2×2 stat grid */}
+        <div className='grid grid-cols-2 grid-rows-2 border-r-4 border-black'>
+
+          <div className='border-r-2 border-b-2 border-black overflow-hidden relative bg-cover bg-top' style={{ backgroundImage: "url('/photos/sebastian_03.jpg')" }}>
+            <div className='absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent' />
+            <div className='absolute bottom-3 left-3 z-10'>
+              <p className='text-white/60 font-title tracking-[0.2em] uppercase mb-0.5' style={{ fontSize: '0.45rem' }}>World Championships</p>
+              <p className='text-white font-title font-bold leading-none' style={{ fontSize: '3.5vh' }}>4×</p>
+            </div>
+          </div>
+
+          <div className='border-b-2 border-black overflow-hidden relative bg-cover bg-center' style={{ backgroundImage: "url('/photos/sv_black.jpg')" }}>
+            <div className='absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent' />
+            <div className='absolute bottom-3 left-3 z-10'>
+              <p className='text-white/60 font-title tracking-[0.2em] uppercase mb-0.5' style={{ fontSize: '0.45rem' }}>Race Wins</p>
+              <p className='text-white font-title font-bold leading-none' style={{ fontSize: '3.5vh' }}>53</p>
+            </div>
+          </div>
+
+          <div className='border-r-2 border-black overflow-hidden relative bg-cover bg-center' style={{ backgroundImage: "url('/photos/sebastian-vettel-ferrari-3rd.jpg')" }}>
+            <div className='absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent' />
+            <div className='absolute bottom-3 left-3 z-10'>
+              <p className='text-white/60 font-title tracking-[0.2em] uppercase mb-0.5' style={{ fontSize: '0.45rem' }}>Podiums</p>
+              <p className='text-white font-title font-bold leading-none' style={{ fontSize: '3.5vh' }}>122</p>
+            </div>
+          </div>
+
+          <div className='overflow-hidden relative bg-cover bg-center' style={{ backgroundImage: "url('/photos/seb_helemt.jpg')" }}>
+            <div className='absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent' />
+            <div className='absolute bottom-3 left-3 z-10'>
+              <p className='text-white/60 font-title tracking-[0.2em] uppercase mb-0.5' style={{ fontSize: '0.45rem' }}>Fastest Laps</p>
+              <p className='text-white font-title font-bold leading-none' style={{ fontSize: '3.5vh' }}>38</p>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Right half: large feature panel */}
+        <div className='overflow-hidden relative bg-cover bg-center' style={{ backgroundImage: "url('/photos/ferrari_02.jpg')" }}>
+          <div className='absolute inset-0 bg-gradient-to-t from-black/40 to-transparent' />
+        </div>
+
+      </div>
+
+      {/* Driver cutout — spans full 100vh, touches bottom of screen */}
+      <div className='absolute inset-0 flex items-end justify-center z-10 pointer-events-none'>
+        <img
+          src='/photos/sebastian_cover.png'
+          alt='Sebastian Vettel'
+          className='h-3/4 w-auto object-contain object-bottom'
+        />
+      </div>
+
     </div>
   )
 }
 
 export default CoverPage
-
-
